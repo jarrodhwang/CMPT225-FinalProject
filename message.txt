@@ -1,0 +1,173 @@
+FULL REPORT OUTLINE (WHAT TO WRITE IN EACH SECTION)
+
+1. Title and Team Members
+What to include:
+* Final title: Efficient Data Searching in Databases Using Tree-Based and Hash-Based Indexing Structures
+* Your name(s)
+* Course name
+* Instructor (if required)
+
+2. Abstract (2–3 paragraphs)
+Paragraph 1 (Problem)
+* Databases store huge amounts of data
+* Searching without optimization is slow (linear scan O(n))
+* Need for indexing structures
+
+Paragraph 2 (Solution overview)
+* Two main indexing approaches:
+    * Tree-based indexing (ordered search)
+    * Hash-based indexing (fast lookup)
+* Each solves different query types
+
+Paragraph 3 (Your work)
+* You study and compare both structures
+* You implement and test performance
+* You analyze trade-offs (speed, ordering, query type)
+
+3. Introduction and Motivation
+What to write:
+Problem context:
+* Data size in modern systems is massive
+* Searching without structure is inefficient
+Why indexing is needed:
+* Avoid full table scan
+* Improve query performance
+Main idea:
+* Databases use:
+    * Tree-based indexing → ordered access
+    * Hash-based indexing → direct lookup
+Motivation:
+* Understand how databases achieve fast retrieval
+* Compare trade-offs between approaches
+
+4. Background / Definitions
+Define ONLY what you use:
+Data structures:
+* Array (basic storage idea)
+* Binary Search Tree (conceptual foundation)
+* Balanced trees (AVL / Red-Black concept)
+* Hash Table / Hash Map
+
+Indexing concepts:
+* Index = structure that speeds up search
+* Key-value mapping
+* Ordered vs unordered data
+
+Complexity:
+* O(n), O(log n), O(1)
+
+5. Historical Narrative (VERY IMPORTANT)
+Write evolution story:
+
+5.1 Early database searching
+* Sequential search in arrays/files
+* Very slow for large datasets
+
+5.2 Tree-based indexing idea
+* BST introduced as ordered structure
+* Problem: unbalanced trees → slow performance
+
+5.3 Balanced trees improvement
+* AVL tree → strict balancing
+* Red-Black tree → efficient balancing used in practice
+
+5.4 Hashing introduction
+* Hash tables introduced for direct access
+* Average O(1) search
+
+5.5 Modern databases
+* Combine both:
+    * tree indexes for range queries
+    * hash indexes for equality queries
+
+6. Recent Advancements / Major Applications
+6.1 Tree-based indexing in databases
+* Used for:
+    * range queries
+    * sorting results
+* Supports ordered traversal
+
+6.2 Hash-based indexing
+* Used for:
+    * fast lookup
+    * equality conditions
+* Example use case: primary key search
+
+6.3 Hybrid usage in systems
+* Databases choose index based on query type
+* Query optimizer selects best structure
+
+7. Implementation (VERY IMPORTANT)
+What you implement:
+Option (simple and strong):
+* Array linear search
+* Hash map search
+* BST or AVL search (optional if time allows)
+
+Design explanation:
+* Dataset generation (random integers or records)
+* Insert into structures
+* Perform search queries
+
+Connection to theory:
+* Compare theoretical complexity vs real performance
+
+GitHub:
+* upload code (if required)
+
+8. Experiments / Evaluation
+What to measure:
+* search time
+* insertion time
+* scalability
+
+Methodology:
+* run tests with increasing input size:
+    * 1k, 10k, 50k, 100k
+* repeat tests for accuracy
+
+Metrics:
+* execution time (ms)
+* average search time
+
+Results:
+* table of values
+* graph:
+    * input size vs time
+
+Expected outcome:
+* Hash table fastest average
+* Tree-based slower but stable and ordered
+
+9. Discussion
+Include:
+Trade-offs:
+* Hash tables:
+    * fast
+    * no ordering
+* Trees:
+    * ordered
+    * slightly slower
+
+Limitations:
+* BST can degrade if unbalanced
+* Hash collisions affect performance
+
+Insight:
+* no single best structure
+* depends on query type
+
+What you learned:
+* real systems combine multiple structures
+
+10. Conclusion and Future Work
+Conclusion:
+* tree-based indexing supports ordered queries
+* hash-based indexing supports fast lookup
+* both are essential in databases
+
+Future work:
+* advanced indexing (B-trees in real systems)
+* distributed databases
+* learned indexes (AI-based improvements)
+
